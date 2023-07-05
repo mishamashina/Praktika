@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1304</width>
+    <height>586</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,166 +27,965 @@
      <string>Настройки RS</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>240</y>
-      <width>361</width>
-      <height>34</height>
+      <x>430</x>
+      <y>10</y>
+      <width>81</width>
+      <height>18</height>
      </rect>
     </property>
     <property name="text">
-     <string>Отключиться</string>
+     <string>Имитатор 1</string>
     </property>
    </widget>
-   <widget class="QSplitter" name="splitter">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>40</y>
-      <width>187</width>
-      <height>192</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
-    </property>
-    <widget class="QComboBox" name="comboBox">
-     <item>
-      <property name="text">
-       <string>ttyUSB0</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>ttyUSB1</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QComboBox" name="comboBox_2">
-     <item>
-      <property name="text">
-       <string>3000</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3600</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>4200</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>4800</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QComboBox" name="comboBox_3">
-     <item>
-      <property name="text">
-       <string>4 бит</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>6 бит</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>8 бит</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QComboBox" name="comboBox_4">
-     <item>
-      <property name="text">
-       <string>С контролем честности</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Без контроля честности</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QComboBox" name="comboBox_5">
-     <item>
-      <property name="text">
-       <string>1 бит</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2 бит</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3 бит</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QComboBox" name="comboBox_6">
-     <item>
-      <property name="text">
-       <string>С управлением</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Без управления</string>
-      </property>
-     </item>
-    </widget>
-   </widget>
-   <widget class="QSplitter" name="splitter_2">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>40</y>
-      <width>139</width>
-      <height>191</height>
+      <width>401</width>
+      <height>301</height>
      </rect>
     </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
+    <property name="title">
+     <string/>
     </property>
-    <widget class="QLabel" name="label_2">
+    <widget class="QSplitter" name="splitter_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>139</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Имя порта:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Скорость:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Размер слова:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>Контроль честности:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Стоп-биты:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>Управление потоком:</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>230</y>
+       <width>361</width>
+       <height>34</height>
+      </rect>
+     </property>
      <property name="text">
-      <string>Имя порта:</string>
+      <string>Отключиться</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_3">
+    <widget class="QSplitter" name="splitter">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>30</y>
+       <width>187</width>
+       <height>192</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QComboBox" name="comboBox">
+      <item>
+       <property name="text">
+        <string>ttyUSB0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ttyUSB1</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_2">
+      <item>
+       <property name="text">
+        <string>3000</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3600</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4200</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4800</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_3">
+      <item>
+       <property name="text">
+        <string>4 бит</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>6 бит</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>8 бит</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_4">
+      <item>
+       <property name="text">
+        <string>С контролем честности</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Без контроля честности</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_5">
+      <item>
+       <property name="text">
+        <string>1 бит</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2 бит</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3 бит</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_6">
+      <item>
+       <property name="text">
+        <string>С управлением</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Без управления</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>40</y>
+      <width>271</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>88</width>
+       <height>34</height>
+      </rect>
+     </property>
      <property name="text">
-      <string>Скорость:</string>
+      <string>RS ВКЛ</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_4">
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>20</y>
+       <width>121</width>
+       <height>18</height>
+      </rect>
+     </property>
      <property name="text">
-      <string>Размер слова:</string>
+      <string>Излучение: №151</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_5">
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>58</width>
+       <height>18</height>
+      </rect>
+     </property>
      <property name="text">
-      <string>Контроль честности:</string>
+      <string>Аварии</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_6">
+    <widget class="QSplitter" name="splitter_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>76</width>
+       <height>88</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QCheckBox" name="checkBox">
+      <property name="text">
+       <string>Р ВУМ1</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_2">
+      <property name="text">
+       <string>Р ВУМ2</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_3">
+      <property name="text">
+       <string>Р ВУМ3</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_4">
+      <property name="text">
+       <string>Р ВУМ4</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QSplitter" name="splitter_4">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>100</y>
+       <width>70</width>
+       <height>88</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QCheckBox" name="checkBox_5">
+      <property name="text">
+       <string>Р СУМ</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_6">
+      <property name="text">
+       <string>Q СУМ</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_7">
+      <property name="text">
+       <string>Р ГУ03</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_8">
+      <property name="text">
+       <string>Р ГБ04</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>40</y>
+      <width>271</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>88</width>
+       <height>34</height>
+      </rect>
+     </property>
      <property name="text">
-      <string>Стоп-биты:</string>
+      <string>RS ВКЛ</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_7">
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>20</y>
+       <width>121</width>
+       <height>18</height>
+      </rect>
+     </property>
      <property name="text">
-      <string>Управление потоком:</string>
+      <string>Излучение: №151</string>
      </property>
     </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>58</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Аварии</string>
+     </property>
+    </widget>
+    <widget class="QSplitter" name="splitter_5">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>76</width>
+       <height>88</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QCheckBox" name="checkBox_9">
+      <property name="text">
+       <string>Р ВУМ1</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_10">
+      <property name="text">
+       <string>Р ВУМ2</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_11">
+      <property name="text">
+       <string>Р ВУМ3</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_12">
+      <property name="text">
+       <string>Р ВУМ4</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QSplitter" name="splitter_6">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>100</y>
+       <width>70</width>
+       <height>88</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QCheckBox" name="checkBox_13">
+      <property name="text">
+       <string>Р СУМ</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_14">
+      <property name="text">
+       <string>Q СУМ</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_15">
+      <property name="text">
+       <string>Р ГУ03</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_16">
+      <property name="text">
+       <string>Р ГБ04</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>40</y>
+      <width>271</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>88</width>
+       <height>34</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>RS ВКЛ</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>20</y>
+       <width>121</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Излучение: выкл1</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>58</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Аварии</string>
+     </property>
+    </widget>
+    <widget class="QSplitter" name="splitter_11">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>76</width>
+       <height>88</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QCheckBox" name="checkBox_33">
+      <property name="text">
+       <string>Р ВУМ1</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_34">
+      <property name="text">
+       <string>Р ВУМ2</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_35">
+      <property name="text">
+       <string>Р ВУМ3</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_36">
+      <property name="text">
+       <string>Р ВУМ4</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QSplitter" name="splitter_12">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>100</y>
+       <width>70</width>
+       <height>88</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QCheckBox" name="checkBox_37">
+      <property name="text">
+       <string>Р СУМ</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_38">
+      <property name="text">
+       <string>Q СУМ</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_39">
+      <property name="text">
+       <string>Р ГУ03</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_40">
+      <property name="text">
+       <string>Р ГБ04</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_19">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>10</y>
+      <width>81</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Имитатор 2</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_20">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>10</y>
+      <width>81</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Имитатор 3</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_21">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>280</y>
+      <width>81</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Имитатор 4</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_5">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>310</y>
+      <width>271</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QPushButton" name="pushButton_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>88</width>
+       <height>34</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>RS ВКЛ</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_22">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>20</y>
+       <width>121</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Излучение: выкл</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_23">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>58</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Аварии</string>
+     </property>
+    </widget>
+    <widget class="QSplitter" name="splitter_13">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>76</width>
+       <height>88</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QCheckBox" name="checkBox_41">
+      <property name="text">
+       <string>Р ВУМ1</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_42">
+      <property name="text">
+       <string>Р ВУМ2</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_43">
+      <property name="text">
+       <string>Р ВУМ3</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_44">
+      <property name="text">
+       <string>Р ВУМ4</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QSplitter" name="splitter_14">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>100</y>
+       <width>70</width>
+       <height>88</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QCheckBox" name="checkBox_45">
+      <property name="text">
+       <string>Р СУМ</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_46">
+      <property name="text">
+       <string>Q СУМ</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_47">
+      <property name="text">
+       <string>Р ГУ03</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_48">
+      <property name="text">
+       <string>Р ГБ04</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_6">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>310</y>
+      <width>271</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QPushButton" name="pushButton_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>88</width>
+       <height>34</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>RS ВКЛ</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_24">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>20</y>
+       <width>121</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Излучение: выкл</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_25">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>58</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Аварии</string>
+     </property>
+    </widget>
+    <widget class="QSplitter" name="splitter_15">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>76</width>
+       <height>88</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QCheckBox" name="checkBox_49">
+      <property name="text">
+       <string>Р ВУМ1</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_50">
+      <property name="text">
+       <string>Р ВУМ2</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_51">
+      <property name="text">
+       <string>Р ВУМ3</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_52">
+      <property name="text">
+       <string>Р ВУМ4</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QSplitter" name="splitter_16">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>100</y>
+       <width>70</width>
+       <height>88</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QCheckBox" name="checkBox_53">
+      <property name="text">
+       <string>Р СУМ</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_54">
+      <property name="text">
+       <string>Q СУМ</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_55">
+      <property name="text">
+       <string>Р ГУ03</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_56">
+      <property name="text">
+       <string>Р ГБ04</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_7">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>310</y>
+      <width>271</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QPushButton" name="pushButton_9">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>88</width>
+       <height>34</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>RS ВКЛ</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_26">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>20</y>
+       <width>121</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Излучение: выкл</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_27">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>58</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Аварии</string>
+     </property>
+    </widget>
+    <widget class="QSplitter" name="splitter_17">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>76</width>
+       <height>88</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QCheckBox" name="checkBox_57">
+      <property name="text">
+       <string>Р ВУМ1</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_58">
+      <property name="text">
+       <string>Р ВУМ2</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_59">
+      <property name="text">
+       <string>Р ВУМ3</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_60">
+      <property name="text">
+       <string>Р ВУМ4</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QSplitter" name="splitter_18">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>100</y>
+       <width>70</width>
+       <height>88</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QCheckBox" name="checkBox_61">
+      <property name="text">
+       <string>Р СУМ</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_62">
+      <property name="text">
+       <string>Q СУМ</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_63">
+      <property name="text">
+       <string>Р ГУ03</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_64">
+      <property name="text">
+       <string>Р ГБ04</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_28">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>280</y>
+      <width>81</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Имитатор 5</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_29">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>280</y>
+      <width>81</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Имитатор 6</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -194,7 +993,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1304</width>
      <height>30</height>
     </rect>
    </property>
