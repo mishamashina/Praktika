@@ -13,8 +13,192 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>111</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Настройки RS</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>240</y>
+      <width>361</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Отключиться</string>
+    </property>
+   </widget>
+   <widget class="QSplitter" name="splitter">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>40</y>
+      <width>187</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QComboBox" name="comboBox">
+     <item>
+      <property name="text">
+       <string>ttyUSB0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ttyUSB1</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_2">
+     <item>
+      <property name="text">
+       <string>3000</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3600</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4200</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4800</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_3">
+     <item>
+      <property name="text">
+       <string>4 бит</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>6 бит</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>8 бит</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_4">
+     <item>
+      <property name="text">
+       <string>С контролем честности</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Без контроля честности</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_5">
+     <item>
+      <property name="text">
+       <string>1 бит</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2 бит</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3 бит</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_6">
+     <item>
+      <property name="text">
+       <string>С управлением</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Без управления</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QSplitter" name="splitter_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>40</y>
+      <width>139</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Имя порта:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Скорость:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>Размер слова:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>Контроль честности:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>Стоп-биты:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="text">
+      <string>Управление потоком:</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
