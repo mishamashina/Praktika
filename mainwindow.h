@@ -1,6 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "serialportreader.h"
+#include "serialportwriter.h"
 #include <QMainWindow>
 #include <QSerialPort>
 #include <QThread>
@@ -21,5 +23,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    SerialPortReader* reader;
+    SerialPortWriter* writer;
+    QSerialPort* serialPort;
+
 };
 #endif // MAINWINDOW_H

@@ -34,10 +34,10 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
-        senderthread.cpp
-        senderthread.h
-        receiverthread.cpp
-        receiverthread.h
+        serialportwriter.cpp
+        serialportwriter.h
+        serialportreader.cpp
+        serialportreader.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
