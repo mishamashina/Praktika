@@ -10,6 +10,10 @@ int main(int argc, char *argv[])
 //    обрабатывать аргументы командной строки.
     MainWindow w;
     w.show();
+    SenderThread serial;
+    serial.transaction("ttyUSB0", 3000, "Прием");
+    ReceiverThread serial1;
+    serial1.startReceiver("ttyUSB1", 3000, "Слышу");
     return a.exec();
 }
 //В строке 13 выполняется передача управления библиотеке Qt. С этого момента программа переходит
