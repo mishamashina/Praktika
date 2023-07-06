@@ -34,6 +34,10 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        senderthread.cpp
+        senderthread.h
+        receiverthread.cpp
+        receiverthread.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -53,4 +57,3 @@ else()
 endif()
 
 target_link_libraries(Praktika_zadanie_1 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt5::SerialPort Qt5::Core)
-
