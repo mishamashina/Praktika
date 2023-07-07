@@ -16,16 +16,19 @@ class SerialPortReader : public QObject
 
 public:
     explicit SerialPortReader(QSerialPort *serialPort, QObject *parent = nullptr);
-
-public slots:
-    void handleReadyRead();
-    void handleTimeout();
-    void handleError(QSerialPort::SerialPortError error);
-
-private:
     QSerialPort *m_serialPort = nullptr;
     QByteArray m_readData;
     QTextStream m_standardOutput;
     QTimer m_timer;
+
+public slots:
+    void handleReadyRead();
+//    void handleTimeout();
+//    void handleError(QSerialPort::SerialPortError error);
+signals:
+    void onFrequency(int num_im, int num_freq);
+    void offFrequency(int num_im);
+
+private:
 };
 #endif // SERIALPORTREADER_H

@@ -20,12 +20,16 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    SerialPortReader* reader;
+    SerialPortWriter* writer;
+    QSerialPort* serialPort0;
+    QSerialPort* serialPort1;
+
+public slots:
+    void onFrequency(int num_im, int num_freq);
+    void offFrequency(int num_im);
 
 private:
     Ui::MainWindow *ui;
-    SerialPortReader* reader;
-    SerialPortWriter* writer;
-    QSerialPort* serialPort;
-
 };
 #endif // MAINWINDOW_H
