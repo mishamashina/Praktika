@@ -29,6 +29,7 @@ public:
 public slots:
     void onFrequency(int num_im, int num_freq);
     void offFrequency(int num_im);
+    void controlReport(int num_im);
 
 private:
     Ui::MainWindow *ui;

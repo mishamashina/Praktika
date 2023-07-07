@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent)   : QMainWindow(parent), ui(new Ui::Main
 
     QByteArray writeData;
     writeData.resize(4);
-    writeData[0] = 0xf2;
+    writeData[0] = 0xf3;
     writeData[1] = 0x01;
     writeData[2] = 0x01;
     writeData[3] = 0x04;
@@ -45,6 +45,7 @@ MainWindow::MainWindow(QWidget *parent)   : QMainWindow(parent), ui(new Ui::Main
 
     connect(reader,&SerialPortReader::onFrequency, this, &MainWindow::onFrequency);
     connect(reader, &SerialPortReader::offFrequency, this, &MainWindow::offFrequency);
+    connect(reader, &SerialPortReader::controlReport, this, &MainWindow::controlReport);
 }
 
 MainWindow::~MainWindow()
@@ -71,4 +72,45 @@ void MainWindow::offFrequency(int num_im)
         break;
     }
 }
+void MainWindow::controlReport(int num_ui)
+{
+    unsigned char flag =0;
+    switch(num_ui)
+    {
+        case 1:
+        if ( ui->checkBox->checkState()){
+            flag |= 1 << 0;
+        }
+        else
+        {
+            flag &= ~(1 << (1));
+        }
 
+        if ( ui->checkBox_2->checkState()){
+            flag |= 1 << (2);
+        }
+        else
+        {
+            flag &= ~(1 << (2));
+        }
+
+        if ( ui->checkBox_3->checkState()){
+            flag |= 1 << (3);
+        }
+        else
+        {
+            flag &= ~(1 << (3));
+        }
+
+
+
+    }
+    QByteArray writeData;
+    writeData.resize(4);
+    writeData[0] = 0xf3;
+    writeData[1] = num_ui;
+    writeData[2] = 0x55;
+    writeData[3] = flag;
+
+    writer->write(writeData);
+}

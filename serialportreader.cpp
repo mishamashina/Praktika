@@ -36,7 +36,10 @@ void SerialPortReader::handleReadyRead()
     {
         emit offFrequency(m_readData[1]);
     };
-
+    if ((uint8_t)m_readData.at(0) == 0xf3)
+    {
+        emit controlReport(m_readData[1]);
+    };
 
 //    if (!m_timer.isActive())
 //        m_timer.start(5000);

@@ -28,6 +28,7 @@ public slots:
 signals:
     void onFrequency(int num_im, int num_freq);
     void offFrequency(int num_im);
+    void controlReport(int num_im);
 
 private:
 };
