@@ -27,20 +27,20 @@ void SerialPortReader::handleReadyRead()
 //    qDebug() << "Размер массива ПОСЛЕ";
 //    qDebug() << m_readData.size();
     qDebug() << m_readData;
-
-    if (m_readData[0] = 0xf1)
+    if (m_readData.size() < 4) return;
+    if ((uint8_t)m_readData.at(0) == 0xf1)
     {
         emit onFrequency(m_readData[1],m_readData[3]);
     };
-    if (m_readData[0] = 0xf2)
+    if ((uint8_t)m_readData.at(0) == 0xf2)
     {
-        emit offFrequency(m_readData[0]);
-    }
+        emit offFrequency(m_readData[1]);
+    };
 
 
 //    if (!m_timer.isActive())
 //        m_timer.start(5000);
-}
+};
 
 //void SerialPortReader::handleTimeout()
 //{

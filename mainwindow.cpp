@@ -2,6 +2,7 @@
 #include "./ui_mainwindow.h"
 #include "serialportreader.h"
 #include <QByteArray>
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)   : QMainWindow(parent), ui(new Ui::MainWindow)
 {
@@ -52,10 +53,11 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::onFrequency(int num_im, int num_freq) {
+    qDebug()<<"Зашел"<<QString::number(num_im);
     switch(num_im) {
         case 1:
-        ui->checkBox_17->setChecked(true);
-        ui->checkBox_17->setText("Излучение: № " + QString::number(num_freq));
+//        ui->label_13->clear();
+        ui->label_13->setText("Излучение: № " + QString::number(num_freq));
         break;
     }
 }
@@ -64,8 +66,8 @@ void MainWindow::offFrequency(int num_im)
 {
     switch(num_im) {
         case 1:
-        ui->checkBox_17->setChecked(false);
-        ui->checkBox_17->setText("Излучение: выкл");
+//        ui->label_13->clear();
+        ui->label_13->setText("Излучение: выкл");
         break;
     }
 }
