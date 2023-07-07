@@ -239,85 +239,6 @@
       <string>RS ВКЛ</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_10">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>60</y>
-       <width>58</width>
-       <height>18</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Аварии</string>
-     </property>
-    </widget>
-    <widget class="QSplitter" name="splitter_3">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>100</y>
-       <width>76</width>
-       <height>88</height>
-      </rect>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <widget class="QCheckBox" name="checkBox">
-      <property name="text">
-       <string>Р ВУМ1</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_2">
-      <property name="text">
-       <string>Р ВУМ2</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_3">
-      <property name="text">
-       <string>Р ВУМ3</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_4">
-      <property name="text">
-       <string>Р ВУМ4</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QSplitter" name="splitter_4">
-     <property name="geometry">
-      <rect>
-       <x>140</x>
-       <y>100</y>
-       <width>70</width>
-       <height>88</height>
-      </rect>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <widget class="QCheckBox" name="checkBox_5">
-      <property name="text">
-       <string>Р СУМ</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_6">
-      <property name="text">
-       <string>Q СУМ</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_7">
-      <property name="text">
-       <string>Р ГУ03</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_8">
-      <property name="text">
-       <string>Р ГБ04</string>
-      </property>
-     </widget>
-    </widget>
     <widget class="QLabel" name="label_13">
      <property name="geometry">
       <rect>
@@ -330,6 +251,85 @@
      <property name="text">
       <string>label</string>
      </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_8">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>231</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Аварии</string>
+     </property>
+     <widget class="QSplitter" name="splitter_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>76</width>
+        <height>88</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QCheckBox" name="checkBox">
+       <property name="text">
+        <string>Р ВУМ1</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_2">
+       <property name="text">
+        <string>Р ВУМ2</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_3">
+       <property name="text">
+        <string>Р ВУМ3</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_4">
+       <property name="text">
+        <string>Р ВУМ4</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QSplitter" name="splitter_4">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>30</y>
+        <width>70</width>
+        <height>88</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QCheckBox" name="checkBox_5">
+       <property name="text">
+        <string>Р СУМ</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_6">
+       <property name="text">
+        <string>Q СУМ</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_7">
+       <property name="text">
+        <string>Р ГУ03</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_8">
+       <property name="text">
+        <string>Р ГБ04</string>
+       </property>
+      </widget>
+     </widget>
     </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_3">

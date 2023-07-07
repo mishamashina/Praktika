@@ -43,6 +43,15 @@ MainWindow::MainWindow(QWidget *parent)   : QMainWindow(parent), ui(new Ui::Main
     reader = new SerialPortReader(serialPort1);
     reader->handleReadyRead();
 
+//    QList<QCheckBox *> allButtons = ui->groupBox_8->findChildren<QCheckBox *>();
+//    ui->checkBox->setChecked(true);
+//    qDebug() <<"Count:"<<allButtons.size();
+//    for(int i = 0; i < allButtons.size(); ++i)
+//    {
+//        if(allButtons.at(i)->isChecked())
+//            qDebug() << "Use" << allButtons.at(i)->text()<< i;//or what you need
+//    }
+
     connect(reader,&SerialPortReader::onFrequency, this, &MainWindow::onFrequency);
     connect(reader, &SerialPortReader::offFrequency, this, &MainWindow::offFrequency);
     connect(reader, &SerialPortReader::controlReport, this, &MainWindow::controlReport);
@@ -77,30 +86,46 @@ void MainWindow::controlReport(int num_ui)
     unsigned char flag =0;
     switch(num_ui)
     {
+
         case 1:
-        if ( ui->checkBox->checkState()){
-            flag |= 1 << 0;
-        }
-        else
+        QList<QCheckBox *> allButtons = ui->groupBox_8->findChildren<QCheckBox *>();
+        qDebug() <<"Count:"<<allButtons.size();
+        for(int i = 0; i < allButtons.size(); ++i)
         {
-            flag &= ~(1 << (1));
-        }
+            if(allButtons.at(i)->checkState())
+            {
+                flag |= 1 << i;
+                qDebug() << "Use" << allButtons.at(i)->text()<< i;//or what you need
 
-        if ( ui->checkBox_2->checkState()){
-            flag |= 1 << (2);
+            }
+            else
+            {
+                flag &= ~(1 << (i));
+            }
         }
-        else
-        {
-            flag &= ~(1 << (2));
-        }
+//        if ( ui->checkBox->checkState()){
+//            flag |= 1 << 0;
+//        }
+//        else
+//        {
+//            flag &= ~(1 << (1));
+//        }
 
-        if ( ui->checkBox_3->checkState()){
-            flag |= 1 << (3);
-        }
-        else
-        {
-            flag &= ~(1 << (3));
-        }
+//        if ( ui->checkBox_2->checkState()){
+//            flag |= 1 << (2);
+//        }
+//        else
+//        {
+//            flag &= ~(1 << (2));
+//        }
+
+//        if ( ui->checkBox_3->checkState()){
+//            flag |= 1 << (3);
+//        }
+//        else
+//        {
+//            flag &= ~(1 << (3));
+//        }
 
 
 
