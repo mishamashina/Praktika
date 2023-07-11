@@ -24,14 +24,16 @@ public:
     SerialPortReader* reader;
     SerialPortWriter* writer;
     QSerialPort* serialPort0;
-    QSerialPort* serialPort1;
+    Ui::MainWindow *ui;
 
 public slots:
-    void onFrequency(int num_im, int num_freq);
-    void offFrequency(int num_im);
-    void controlReport(int num_im);
+    void onFrequency(int tc, int num_im, int num_freq);
+    void offFrequency(int tc, int num_im);
+    void controlReport(int tc, int num_im);
+    void Clicked();
+    void Clicked_Butt2();
+    void Clicked_Butt3();
+//    void noClicked();
 
-private:
-    Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H
