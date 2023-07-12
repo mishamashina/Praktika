@@ -35,7 +35,6 @@ public slots:
     void clickedButt2();
     void pressButt3();
     void clickedButt3();
-//    void noClicked();
 
 };
 #endif // MAINWINDOW_H

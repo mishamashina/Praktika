@@ -24,8 +24,6 @@ public:
 
 public slots:
     void handleReadyRead();
-//    void handleTimeout();
-//    void handleError(QSerialPort::SerialPortError error);
 signals:
     void onFrequency(int tc, int num_im, int num_freq);
     void offFrequency(int tc, int num_im);

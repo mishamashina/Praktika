@@ -1,6 +1,4 @@
 #include "serialportreader.h"
-#include "mainwindow.h"
-#include "./ui_mainwindow.h"
 #include <QCoreApplication>
 #include <QDebug>
 #include <QCheckBox>

@@ -24,8 +24,6 @@ public:
     QTimer m_timer;
 private slots:
     void handleBytesWritten(qint64 bytes);
-//    void handleTimeout();
-//    void handleError(QSerialPort::SerialPortError error);
 
 };
 
