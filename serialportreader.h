@@ -21,7 +21,6 @@ public:
     QByteArray m_readData;
     QTextStream m_standardOutput;
     QTimer m_timer;
-    Ui::MainWindow *ui;
 
 public slots:
     void handleReadyRead();

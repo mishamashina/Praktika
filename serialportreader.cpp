@@ -23,7 +23,8 @@ void SerialPortReader::handleReadyRead()
 
     if ((uint8_t)m_readData.at(0) == 0xf1)
     {
-        emit onFrequency(m_readData[0], m_readData[1] ,m_readData[3]);
+        emit onFrequency(m_readData[0], m_readData[1] ,(uint8_t)m_readData.at(3));
+        qDebug() << ((uint8_t)m_readData.at(3));
     };
     if ((uint8_t)m_readData.at(0) == 0xf2)
     {

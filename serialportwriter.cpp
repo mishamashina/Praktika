@@ -54,4 +54,19 @@ void SerialPortWriter::write(const QByteArray &writeData)
     const qint64 bytesWritten = m_serialPort->write(writeData);
     qDebug()<<QString::number(bytesWritten);
 
+//    if (bytesWritten == -1) {
+//        m_standardOutput << QObject::tr("Failed to write the data to port %1, error: %2")
+//                            .arg(m_serialPort->portName())
+//                            .arg(m_serialPort->errorString())
+//                         << "\n";
+//        QCoreApplication::exit(1);
+//    } else if (bytesWritten != m_writeData.size()) {
+//        m_standardOutput << QObject::tr("Failed to write all the data to port %1, error: %2")
+//                            .arg(m_serialPort->portName())
+//                            .arg(m_serialPort->errorString())
+//                         << "\n";
+//        QCoreApplication::exit(1);
+//    }
+
+//    m_timer.start(5000);
 }
