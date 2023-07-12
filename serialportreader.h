@@ -16,7 +16,7 @@ class SerialPortReader : public QObject
     Q_OBJECT
 
 public:
-    explicit SerialPortReader(QSerialPort *serialPort, Ui::MainWindow *new_ui, QObject *parent = nullptr);
+    explicit SerialPortReader(QSerialPort *serialPort, QObject *parent = nullptr);
     QSerialPort *m_serialPort = nullptr;
     QByteArray m_readData;
     QTextStream m_standardOutput;

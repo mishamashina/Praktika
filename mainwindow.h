@@ -31,8 +31,10 @@ public slots:
     void offFrequency(int tc, int num_im);
     void controlReport(int tc, int num_im);
     void Clicked();
-    void Clicked_Butt2();
-    void Clicked_Butt3();
+    void pressButt2();
+    void clickedButt2();
+    void pressButt3();
+    void clickedButt3();
 //    void noClicked();
 
 };

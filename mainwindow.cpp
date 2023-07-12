@@ -24,18 +24,20 @@ MainWindow::MainWindow(QWidget *parent)   : QMainWindow(parent), ui(new Ui::Main
     serialPort0->setFlowControl(QSerialPort::NoFlowControl);
     ui->comboBox_6->setCurrentIndex(1);
 
-//    ui->pushButton_2->clicked(serialPort0->clo);
-
     serialPort0->open(QIODevice::ReadWrite);
 
     writer = new SerialPortWriter(serialPort0);
 
-    reader = new SerialPortReader(serialPort0,ui);
+    reader = new SerialPortReader(serialPort0);
     reader->handleReadyRead();
 
     connect(ui->pushButton, &QPushButton::clicked, this, &MainWindow::Clicked);
-    connect(ui->pushButton_2, &QPushButton::clicked, this, &MainWindow::Clicked_Butt2);
-    connect(ui->pushButton_3, &QPushButton::clicked, this, &MainWindow::Clicked_Butt3);
+
+    connect(ui->pushButton_2, &QPushButton::pressed, this, &MainWindow::pressButt2);
+    connect(ui->pushButton_2, &QPushButton::clicked, this, &MainWindow::clickedButt2);
+
+    connect(ui->pushButton_3, &QPushButton::pressed, this, &MainWindow::pressButt3);
+    connect(ui->pushButton_3, &QPushButton::clicked, this, &MainWindow::clickedButt3);
 
     connect(reader, &SerialPortReader::onFrequency, this, &MainWindow::onFrequency);
     connect(reader, &SerialPortReader::offFrequency, this, &MainWindow::offFrequency);
@@ -52,22 +54,29 @@ void MainWindow::Clicked()
     serialPort0->close();
 }
 
-void MainWindow::Clicked_Butt2()
+void MainWindow::pressButt2()
+{
+    ui->pushButton_2->setText("RS выкл");
+}
+
+void MainWindow::clickedButt2()
 {
     ui->pushButton_2->setText("RS вкл");
-//    ui->pushButton_2->setDown(true);
 }
-void MainWindow::Clicked_Butt3()
+
+void MainWindow::pressButt3()
+{
+    ui->pushButton_3->setText("RS выкл");
+}
+
+void MainWindow::clickedButt3()
 {
     ui->pushButton_3->setText("RS вкл");
-//    ui->pushButton_3->setDown(true);
-
 }
-
 
 
 void MainWindow::onFrequency(int tc, int num_im, int num_freq) {
-    qDebug()<<"Зашел"<<QString::number(num_im);
+//    qDebug()<<"Зашел"<<QString::number(num_im);
     switch(num_im) {
         case 1:
         {
@@ -146,6 +155,17 @@ void MainWindow::controlReport(int tc, int num_ui)
                     flag &= ~(1 << (i));
                 }
             }
+            if (!(ui->pushButton_2->isDown()))
+            {
+                QByteArray writeData;
+                writeData.resize(4);
+                writeData[0] = tc;
+                writeData[1] = num_ui;
+                writeData[2] = 0x55;
+                writeData[3] = flag;
+
+                writer->write(writeData);
+            }
             break;
         }
 
@@ -175,16 +195,18 @@ void MainWindow::controlReport(int tc, int num_ui)
                     flag &= ~(1 << (i));
                 }
             }
+            if (!(ui->pushButton_3->isDown()))
+            {
+                QByteArray writeData;
+                writeData.resize(4);
+                writeData[0] = tc;
+                writeData[1] = num_ui;
+                writeData[2] = 0x55;
+                writeData[3] = flag;
+
+                writer->write(writeData);
+            }
             break;
         }
-
     }
-    QByteArray writeData;
-    writeData.resize(4);
-    writeData[0] = tc;
-    writeData[1] = num_ui;
-    writeData[2] = 0x55;
-    writeData[3] = flag;
-
-    writer->write(writeData);
 }

@@ -236,7 +236,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>RS выкл</string>
+      <string>RS вкл</string>
      </property>
     </widget>
     <widget class="QGroupBox" name="groupBox_8">
@@ -354,7 +354,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>RS выкл</string>
+      <string>RS вкл</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_11">
